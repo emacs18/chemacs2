@@ -28,7 +28,10 @@
 ;;; Code:
 (defvar chemacs-version "2.0")
 (defvar config-home (or (getenv "XDG_CONFIG_HOME") "~/.config"))
-(defvar chemacs-profiles-paths (list "~/.emacs-profiles.el" (format "%s/%s" config-home "chemacs/profiles.el" )))
+(defvar chemacs-profiles-paths
+  (list "~/.emacs.d/profiles.el"
+        "~/.emacs-profiles.el"
+        (format "%s/%s" config-home "chemacs/profiles.el" )))
 (defvar chemacs-default-profile-paths (list "~/.emacs-profile" (format "%s/%s" config-home "chemacs/profile")))
 
 ;; Copy `seq' library's `seq-filter' to avoid requiring it, see note above.
